@@ -53,7 +53,6 @@ nav a:hover {
 .gallery {
     display:flex;
     gap:20px;
-    flex-wrap:wrap;
 }
 
 .gallery img {
@@ -66,6 +65,40 @@ nav a:hover {
     color:#00ff9c;
     padding:20px;
     font-family:monospace;
+}
+
+/* ORACLE PARALLAX IMAGE */
+
+.oracle-parallax {
+
+    background-image: url("Oracle.jpg");
+    height:800px;
+
+    background-attachment:fixed;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.oracle-text {
+
+    background:rgba(0,0,0,0.6);
+    color:white;
+    padding:40px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.oracle-text h1 {
+    font-size:50px;
+}
+
+.oracle-text p {
+    font-size:20px;
 }
 
 footer {
@@ -96,6 +129,7 @@ footer {
 <div class="container">
 
 <section class="section">
+
 <h2>About This Website</h2>
 
 <p>
@@ -104,12 +138,11 @@ This website demonstrates my understanding of
 </p>
 
 <p>
-Each code commit to the Git repository automatically triggers a pipeline
-which validates the build and deploys the website to the server.
+Each code commit to the Git repository automatically triggers a deployment pipeline.
 </p>
 
 <p>
-This ensures reliable, repeatable deployments without manual intervention.
+This ensures reliable deployments and quick updates without manual intervention.
 </p>
 
 </section>
@@ -122,9 +155,9 @@ This ensures reliable, repeatable deployments without manual intervention.
 <p><strong>Current Version:</strong> v1.1</p>
 
 <p>
-This version demonstrates an automated deployment triggered by a Git commit.
+This version demonstrates a deployment triggered through a Git commit.
 A new image asset (Oracle.jpg) was introduced and automatically deployed
-through the CI/CD pipeline.
+via the CI/CD pipeline.
 </p>
 
 </section>
@@ -141,15 +174,29 @@ through the CI/CD pipeline.
 <img src="Mountain.jpg" alt="Mountain image">
 </div>
 
-<div>
-<h4>Oracle Deployment</h4>
-<img src="Oracle.jpg" alt="Oracle deployment image">
 </div>
+
+</section>
+
+</div>
+
+
+<!-- BIG ORACLE IMAGE SECTION -->
+
+<section class="oracle-parallax">
+
+<div class="oracle-text">
+
+<h1>Oracle Deployment</h1>
+
+<p>This image was deployed via an automated CI/CD pipeline</p>
 
 </div>
 
 </section>
 
+
+<div class="container">
 
 <section class="section">
 
@@ -157,11 +204,11 @@ through the CI/CD pipeline.
 
 <div class="pipeline">
 
-Step 1: Developer pushes code to Git repository  
-Step 2: CI pipeline automatically triggers  
-Step 3: HTML files are validated and packaged  
-Step 4: Updated artifacts are deployed to web server  
-Step 5: Website automatically reflects the new version  
+Step 1: Developer pushes code to Git repository<br>  
+Step 2: CI pipeline automatically triggers<br>
+Step 3: HTML files are validated and packaged<br>  
+Step 4: Updated artifacts are deployed to web server<br>  
+Step 5: Website automatically reflects the new version<br>  
 
 Deployment Example: Oracle.jpg was added and deployed through the pipeline.
 
@@ -171,10 +218,12 @@ Deployment Example: Oracle.jpg was added and deployed through the pipeline.
 
 </div>
 
-
 <footer>
+
 <p>Created for Oracle Interview Demonstration</p>
+
 <p>CI/CD | Automation | Cloud Infrastructure</p>
+
 </footer>
 
 </body>
